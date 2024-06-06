@@ -5,9 +5,5 @@ import { Menu } from "../app/components/common/menu";
 import { Layout } from "../app/components/layout";
 
 export default async function Sample() {
-  return (
-    <>
-      Sample
-    </>
-  );
+  return <>Sample</>;
 }

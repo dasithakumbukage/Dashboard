@@ -5,7 +5,6 @@ import { Menu } from "../app/components/common/menu";
 export default function PaymentDetails() {
   return (
     <>
-      <Menu />
       <Payment />
     </>
   );

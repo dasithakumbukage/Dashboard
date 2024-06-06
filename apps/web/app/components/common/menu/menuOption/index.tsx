@@ -20,16 +20,14 @@ export const MenuOptions = () => {
 
   useEffect(() => {
     async function fetchData() {
-      setLoading(true);
       const requiredPermission = await getPermission("ask:user-management");
-
+      
       if (isAuthenticated && requiredPermission?.isGranted) {
         console.log("Permission Granted");
-        // Proceed with rendering or navigation
+        setLoading(false);
       } else if (isAuthenticated && !requiredPermission?.isGranted) {
         console.log("Permission Denied");
         router.push("/");
-        // Handle permission denied scenario (e.g., redirect, show error message)
       }
     }
 
@@ -37,7 +35,7 @@ export const MenuOptions = () => {
   }, [isAuthenticated]);
 
   if (loading) {
-    return <div>Loading...</div>; // or any loading indicator you prefer
+    return <div className={styles.main}>Loading...</div>;
   }
 
   return (
@@ -60,7 +58,7 @@ export const MenuOptions = () => {
 
           <div className={styles.iconDiv}>
             <MdOutlineSubscriptions className={styles.userIcon} />
-            <h6 className={styles.iconName}>Payment</h6>
+            <h6 className={styles.iconName}>Subscription</h6>
           </div>
           <div className={styles.iconDiv}>
             <TbReportSearch className={styles.userIcon} />

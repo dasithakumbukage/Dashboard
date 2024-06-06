@@ -56,12 +56,14 @@ export const UserDetails = () => {
 
   return (
     <div className={styles.main}>
-      <div>
+      <div className={styles.menu}>
         <Menu />
       </div>
-      <div>
-        <h3 className={styles.heading}>User Management</h3>
-        <TableWithFields feilds={VISIBLE_FIELDS} data={CUSTOM_DATA} />
+      <div className={styles.rightDiv}>
+        <div className={styles.tableDiv}>
+          <h3 className={styles.heading}>User Management</h3>
+          <TableWithFields feilds={VISIBLE_FIELDS} data={CUSTOM_DATA} />
+        </div>
       </div>
     </div>
   );

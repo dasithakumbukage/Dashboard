@@ -1,8 +1,4 @@
-"use server";
-
 import React from "react";
-import styles from "./page.module.css";
-import Sample from "../pages/sample";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 import {
@@ -17,15 +13,17 @@ import { Layout } from "./components/layout";
 import { Menu } from "./components/common/menu";
 
 export default async function Page() {
-  const { isAuthenticated } = getKindeServerSession();
-  const isLoggedIn = await isAuthenticated();
+  // const { isAuthenticated } = getKindeServerSession();
+  // const isLoggedIn = await isAuthenticated();
 
-  if (!isLoggedIn) {
-    redirect("/api/auth/login");
-  }
+  // if (!isLoggedIn) {
+  //   redirect("/api/auth/login");
+  // }
 
   return (
     <>
+      {/* <Layout /> */}
+
       <LogoutLink>Logout</LogoutLink>
       <LoginLink>Sign in</LoginLink>
       <RegisterLink>Sign up</RegisterLink>

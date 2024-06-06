@@ -13,10 +13,7 @@ export const Menu = () => {
   
   return (
     <div className={styles.main}>
-      <div className={styles.mainOption}>
         <MenuOptions />
-      </div>
-      {/* <div className={styles.mainChildren}>{children}</div> */}
     </div>
   );
 };

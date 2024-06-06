@@ -1,7 +1,7 @@
 import * as React from "react";
+import styles from "./index.module.css";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { CiSearch } from "react-icons/ci";
-import styles from "./index.module.css";
 
 export default function TableWithFields({ feilds, data }: any) {
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -19,7 +19,7 @@ export default function TableWithFields({ feilds, data }: any) {
   };
 
   return (
-    <div style={{ height: 400, width: "100%" }}>
+    <div className={styles.main}>
       <div className={styles.search}>
         <div className={styles.saerchOption}>
           <CiSearch className={styles.searchIcon} />
@@ -35,15 +35,17 @@ export default function TableWithFields({ feilds, data }: any) {
           </div>
         </div>
       </div>
-      <DataGrid
-        rows={filterRows(data)}
-        columns={feilds.map((field: any) => ({
-          field,
-          headerName: field,
-          width: 150,
-        }))}
-        slots={{ toolbar: GridToolbar }}
-      />
+      <div className={styles.table}>
+        <DataGrid
+          rows={filterRows(data)}
+          columns={feilds.map((field: any) => ({
+            field,
+            headerName: field,
+            width: 150,
+          }))}
+          slots={{ toolbar: GridToolbar }}
+        />
+      </div>
     </div>
   );
 }
