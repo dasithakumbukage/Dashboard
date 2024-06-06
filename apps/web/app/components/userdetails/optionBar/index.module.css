@@ -1,0 +1,75 @@
+.main {
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leftSide {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 10px;
+  border: 1px solid #6a726c;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.searchText {
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  color: #6a726c;
+}
+.searchIcon {
+  margin-right: 15px;
+  font-size: 25px;
+}
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.columnDiv1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.columnDiv2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.columnDiv3 {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+.icons {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.text {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  color: #6a726c;
+}
+@media screen and (max-width: 850px) {
+  .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:normal;
+}
+.leftSide{
+  margin-bottom: 15px;
+}
+}

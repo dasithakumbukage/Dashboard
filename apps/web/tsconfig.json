@@ -5,14 +5,20 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "next.config.js",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "apps/web/app/pages/**/*.tsx", //newly added
+    "apps/web/app/components/**/*.tsx" //newly added
+, "../../middleware.ts"    // "apps/web/app/components/**/**/*.tsx" //newly added
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

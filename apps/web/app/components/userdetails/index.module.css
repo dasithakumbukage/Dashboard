@@ -1,0 +1,16 @@
+.main {
+  width: 100%;
+  display: flex;
+}
+.heading {
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  color: #6a726c;
+  margin-bottom: 40px;
+}
+.optionBar{
+  width: 100%;
+  margin-bottom: 30px;
+}

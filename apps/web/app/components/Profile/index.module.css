@@ -1,0 +1,22 @@
+.main {
+  width: 100%;
+}
+.imageCard{
+  position: relative;
+}
+.upperText{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+.imageIcon{
+  border-radius: 50%;
+}
+.imageDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
