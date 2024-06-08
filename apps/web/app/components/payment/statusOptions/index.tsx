@@ -21,7 +21,7 @@ export const PaymentStatusOption = () => {
         <Box sx={{ borderBottom: 1, borderColor: "divider", border: "none" }}>
           <Tabs
             // disable the tab indicator because it doesn't work well with wrapped container
-            // TabIndicatorProps={{ sx: { display: "none" } }}
+            TabIndicatorProps={{ sx: { display: "none" } }}
             sx={{
               "& .MuiTabs-flexContainer": {
                 flexWrap: "wrap",

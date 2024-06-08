@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import styles from "./index.module.css";
 import TableWithFields from "../common/table";
 import { Menu } from "../common/menu";
+import {
+  LogoutLink,
+  useKindeBrowserClient,
+} from "@kinde-oss/kinde-auth-nextjs";
+import { redirect } from "next/navigation";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const UserDetails = () => {
   const VISIBLE_FIELDS = ["name", "country", "dateCreated", "isAdmin", "View"];
@@ -53,6 +60,16 @@ export const UserDetails = () => {
       View: "Action",
     },
   ];
+
+  //  const { isAuthenticated, getPermission } = useKindeBrowserClient();
+  //  const router = useRouter();
+  //  console.log("isAuthenticated", isAuthenticated);
+
+  //  if (!isAuthenticated) {
+  //   console.log("isAuthenticated sdf", isAuthenticated);
+  //    router.push("/api/auth/login");
+  //    redirect("/api/auth/login");
+  //  }
 
   return (
     <div className={styles.main}>

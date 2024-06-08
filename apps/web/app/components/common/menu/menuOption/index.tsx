@@ -27,7 +27,7 @@ export const MenuOptions = () => {
         setLoading(false);
       } else if (isAuthenticated && !requiredPermission?.isGranted) {
         console.log("Permission Denied");
-        router.push("/");
+        // router.push("/");
       }
     }
 

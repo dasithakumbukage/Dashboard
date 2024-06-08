@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
 import {
@@ -11,14 +11,17 @@ import Signup from "./components/signupCustom";
 import SignInPage from "../pages/sign-in";
 import { Layout } from "./components/layout";
 import { Menu } from "./components/common/menu";
+// import { useRouter } from "next/navigation";
 
 export default async function Page() {
-  // const { isAuthenticated } = getKindeServerSession();
-  // const isLoggedIn = await isAuthenticated();
+  // const router = useRouter();
+  const { isAuthenticated } = getKindeServerSession();
+  const isLoggedIn = await isAuthenticated();
 
-  // if (!isLoggedIn) {
-  //   redirect("/api/auth/login");
-  // }
+  if (!isLoggedIn) {
+    redirect("/api/auth/login");
+  }
+
 
   return (
     <>

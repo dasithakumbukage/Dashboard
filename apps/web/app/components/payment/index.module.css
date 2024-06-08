@@ -2,6 +2,19 @@
   width: 100%;
   display: flex;
 }
+.menu {
+  width: 300px;
+}
+.rightDiv {
+  width: calc(100% - 300px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tableDiv {
+  width: 90%;
+}
 .heading {
   font-family: Poppins;
   font-size: 25px;
