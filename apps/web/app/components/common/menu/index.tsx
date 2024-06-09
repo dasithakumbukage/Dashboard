@@ -10,10 +10,9 @@ import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { MenuOptions } from "./menuOption";
 
 export const Menu = () => {
-  
   return (
     <div className={styles.main}>
-        <MenuOptions />
+      <MenuOptions />
     </div>
   );
 };

@@ -21,18 +21,16 @@ export const MenuOptions = () => {
   useEffect(() => {
     async function fetchData() {
       const requiredPermission = await getPermission("ask:user-management");
-      
-      if (isAuthenticated && requiredPermission?.isGranted) {
-        console.log("Permission Granted");
-        setLoading(false);
-      } else if (isAuthenticated && !requiredPermission?.isGranted) {
-        console.log("Permission Denied");
+
+      if (requiredPermission?.isGranted) {
+        console.log("route access", requiredPermission?.isGranted);
         // router.push("/");
+        setLoading(false);
       }
     }
 
     fetchData();
-  }, [isAuthenticated]);
+  }, [isAuthenticated, loading]);
 
   if (loading) {
     return <div className={styles.main}>Loading...</div>;

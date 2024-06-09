@@ -9,6 +9,7 @@ import {
 import { redirect } from "next/navigation";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { AppBar } from "../common/appBar";
 
 export const UserDetails = () => {
   const VISIBLE_FIELDS = ["name", "country", "dateCreated", "isAdmin", "View"];
@@ -73,13 +74,18 @@ export const UserDetails = () => {
 
   return (
     <div className={styles.main}>
-      <div className={styles.menu}>
-        <Menu />
+      <div className={styles.upperTopSection}>
+        <AppBar />
       </div>
-      <div className={styles.rightDiv}>
-        <div className={styles.tableDiv}>
-          <h3 className={styles.heading}>User Management</h3>
-          <TableWithFields feilds={VISIBLE_FIELDS} data={CUSTOM_DATA} />
+      <div className={styles.bottomSection}>
+        <div className={styles.menu}>
+          <Menu />
+        </div>
+        <div className={styles.rightDiv}>
+          <div className={styles.tableDiv}>
+            <h3 className={styles.heading}>User Management</h3>
+            <TableWithFields feilds={VISIBLE_FIELDS} data={CUSTOM_DATA} />
+          </div>
         </div>
       </div>
     </div>

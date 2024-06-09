@@ -1,7 +1,18 @@
 .main {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
+.bottomSection {
+  width: 100%;
+  display: flex;
+}
+.upperTopSection {
+  width: 100%;
+}
+/* .upperInnerSection {
+  width: 100%;
+} */
 .menu {
   width: 300px;
 }
@@ -28,12 +39,12 @@
   margin-bottom: 30px;
 }
 
-
 @media screen and (max-width: 1024px) {
   .menu {
     display: none;
+    width: 0px;
   }
-  .rightDiv{
+  .rightDiv {
     width: 100%;
   }
 }
