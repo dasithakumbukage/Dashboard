@@ -2,6 +2,7 @@ import * as React from "react";
 import styles from "./index.module.css";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { CiSearch } from "react-icons/ci";
+import { useEffect } from "react";
 
 export default function TableWithFields({ feilds, data }: any) {
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -44,6 +45,14 @@ export default function TableWithFields({ feilds, data }: any) {
             width: 150,
           }))}
           slots={{ toolbar: GridToolbar }}
+          pageSizeOptions={[6]}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 6,
+              },
+            },
+          }}
         />
       </div>
     </div>

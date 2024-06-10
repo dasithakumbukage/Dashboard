@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import TableWithFields from "../common/table";
 import { Menu } from "../common/menu";
@@ -10,9 +10,10 @@ import { redirect } from "next/navigation";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { AppBar } from "../common/appBar";
+import axios from "axios";
 
-export const UserDetails = () => {
-  const VISIBLE_FIELDS = ["name", "country", "dateCreated", "isAdmin", "View"];
+export const UserDetails = ({ newData }:any) => {
+  const VISIBLE_FIELDS = ["id", "first_name", "last_name", "email"];
 
   const CUSTOM_DATA = [
     {
@@ -72,6 +73,18 @@ export const UserDetails = () => {
   //    redirect("/api/auth/login");
   //  }
 
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const response = await axios.get(`http://localhost:5000/users`);
+  //       console.log("data", response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
+
   return (
     <div className={styles.main}>
       <div className={styles.upperTopSection}>
@@ -84,7 +97,7 @@ export const UserDetails = () => {
         <div className={styles.rightDiv}>
           <div className={styles.tableDiv}>
             <h3 className={styles.heading}>User Management</h3>
-            <TableWithFields feilds={VISIBLE_FIELDS} data={CUSTOM_DATA} />
+            <TableWithFields feilds={VISIBLE_FIELDS} data={newData} />
           </div>
         </div>
       </div>
